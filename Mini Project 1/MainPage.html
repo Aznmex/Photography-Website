@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="picture_thumbnails.js"></script>
+		<title> Matthew's Photography Page </title>
+		<link rel="stylesheet" href = "MainPageStyle.css">
+		
+		<script type = "text/javascript">
+        function hovertext(text) {
+            var d = document.getElementById('AbMe');
+            d.innerHTML = "";
+            d.innerHTML = text;
+        }
+        function deftext() {
+            var d = document.getElementById('AbMe');
+            d.innerHTML = "";
+            d.innerHTML = "HOVER OVER ME!";
+        }
+		</script>
+	</head>
+	
+	<body>
+		<header>
+		<h1> - Sanchez Photos - </h1>
+		<main>
+		<h2> Navigation </h2>
+		<nav>
+			<li><a href="Photography.html">Photo Showcase</a></li>
+			<li><a href="PurchasingPhotos.php">Purchase My Photos</a></li>
+			<li><a id = "AbMe" href = "Biography.html" onmouseover = "hovertext('Click here to learn more about me!')" onmouseout = "deftext()"> HOVER OVER ME! </a>
+			<li><a href="Contact.html">Contact Me!</a></li>
+			
+		</nav>
+		</main>	
+		<p> Welcome to my photography website! </p>
+		<p> Here you'll be able to view a select portion of my photos I've taken throughout my career! </p>
+		</header>
+		
+		<h3>Hover over the image to view it larger!</h3>
+			<div id="thumbnails">
+				<img src="AirplaneClouds.jpg" width="200px">
+				<img src="MissionPeakSunset.jpg" width="200px" >
+				<img src="HawaiiSunset.jpg" width="200px" >
+				<img src="HawaiiRainbow.jpg" width="200px" >
+				<img src="AestheticBushes.jpg" width="200px" >
+				<img src="Gator.jpg" width="200px" >
+				<img src="MissionPeak.jpg" width="200px" >
+				<img src="OtherSunset.jpg" width="200px" >
+			</div>
+			
+			<div id="large_image">
+				<img id="bla" src="AirplaneClouds.jpg">
+			</div>
+	
+	<footer>
+		<p> Copyright 2020 Matthew Sanchez </p>
+	</footer>
+	
+	</body>
+</html>

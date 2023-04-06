@@ -1,0 +1,53 @@
+body{
+	background: grey;
+	text-align: center;
+}
+
+main {
+  list-style-type: none;
+  text-align: center;
+  background-color: grey;
+  color: red;
+  font-size: 200%;
+}
+
+
+li a {
+  display: block;
+  font-size: 100%;
+  font-style: italic;
+  color: Black;
+  padding: 8px 16px;
+}
+
+li a:hover {
+  background-color: black;
+  color: red;
+}
+
+h1 {
+	text-align: center;
+	font-style: Fantasy;
+	color: white;
+	font-size: 60px;
+	padding-bottom: .25em;
+    border-bottom: 5px solid red;
+	border-top: 5px solid red;
+    margin-bottom: 0; 
+	background-color: black;
+	text-shadow: -2px -2px 4px red;
+}
+
+footer p{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+}
+
+p{
+	font-size: 200%;
+}

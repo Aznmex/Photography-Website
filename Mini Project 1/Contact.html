@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Purchase Photos</title>
+	<link rel="stylesheet" href = "contact.css">
+	<script src="jquery-3.4.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+    $("#button").click(function() {
+        var item = $("#product").val();
+        var isValid = true;
+
+        if (item == "") { 
+            alert("A Product Type is required!");
+            isValid = false;
+			}
+        else {
+            $("#product").next().text("");
+			alert("Thank you for purchasing these photos! We will be in contact through your email soon!");
+			} 
+		if (isValid) {
+            $("#application").submit();
+			}
+		})
+	});
+	</script>
+	<script>
+        function getFile() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("file").innerHTML =
+                        this.responseText;
+                }
+            };
+            xhttp.open("GET", "file.txt", true);
+            xhttp.send();
+        }
+    </script>
+  </head>
+  <body>
+    <h1>-Contact Me!-</h1>
+	
+	<main>
+		<h2> Navigation </h2>
+		<nav>
+			<li><a href="MainPage.html">Home</a></li>
+			<li><a href="Photography.html">Photo Showcase</a></li>
+			<li><a href="PurchasingPhotos.php">Purchase my photos</a></li>
+			<li><a href="Biography.html">About Me</a> </h3>
+			
+		</nav>
+	</main>	
+		
+	<p>Enter a your information to be notified through email!</p>
+	
+	<form id = "application" name = "application" method = "get" >
+	
+	<p>Enter a product you would like to have featured!</p>
+	<label>Product Type: <input type="text" id="product" 
+	  name="product" title="Any type of photo is accepted!"  </input></p>
+	
+	<label> Quantity: </label>
+		<select name = "quantity" id = "quantity">
+			<option value = "1"> 1 </option>
+			<option value = "2"> 2 </option>
+			<option value = "3"> 3 </option>
+			<option value = "4"> 4  </option>
+			<option value = "5"> 5 </option>
+			<option value = "6"> 6 </option>
+			<option value = "7"> 7 </option>
+			<option value = "8"> 8  </option>
+			<option value = "9"> 9 </option>
+			<option value = "10"> 10 </option>
+	</select>
+	
+	
+	<label>Email: <input type="text" id="email" name="email" title="Please only enter one email." </input></p>
+	<br>
+	<input type="submit" name="submit_button" id = "button" value="Submit Application!" </input>
+	<p id="result"></p>
+	</form>
+	
+	<div id="file">
+		<button type="button" onclick="getFile()"> Learn about this file! </button>
+	</div>
+	
+	<footer>
+		<p> Copyright 2020 Matthew Sanchez </p>
+	</footer>
+</body>	
+</html>	
+ 
